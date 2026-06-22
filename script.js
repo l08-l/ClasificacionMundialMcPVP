@@ -1,33 +1,45 @@
-// Función para cambiar de pestaña (Fase de Grupos / Bracket)
+// Función para cambiar de pestaña dinámicamente
 function cambiarPestana(pestana) {
-    // Remover clase activa de todos los botones y secciones
+    // Romper enlace de activo en todos los botones y ocultar secciones
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('activo'));
     document.querySelectorAll('.contenido-tab').forEach(sec => sec.classList.add('oculto'));
 
-    // Activar el botón y la sección correspondiente
-    if (pestana === 'grupos') {
-        document.querySelector("button[onclick=\"cambiarPestana('grupos')\"]").classList.add('activo');
-        document.getElementById('seccion-grupos').classList.remove('oculto');
-    } else if (pestana === 'bracket') {
-        document.querySelector("button[onclick=\"cambiarPestana('bracket')\"]").classList.add('activo');
-        document.getElementById('seccion-bracket').classList.remove('oculto');
+    // Activar el botón correspondiente usando su atributo de onclick
+    const botonActivo = document.querySelector(`button[onclick="cambiarPestana('${pestana}')"]`);
+    if (botonActivo) botonActivo.classList.add('activo');
+
+    // Mostrar la sección correspondiente
+    const seccionActiva = document.getElementById(`seccion-${pestana}`);
+    if (seccionActiva) seccionActiva.classList.remove('oculto');
+}
+
+// Función para alternar entre Modo Claro y Oscuro
+function alternarTema() {
+    const htmlElement = document.documentElement;
+    const botonTema = document.getElementById('theme-toggle');
+    const temaActual = htmlElement.getAttribute('data-theme');
+    
+    if (temaActual === 'dark') {
+        htmlElement.setAttribute('data-theme', 'light');
+        botonTema.innerText = '🌙 Modo Oscuro';
+    } else {
+        htmlElement.setAttribute('data-theme', 'dark');
+        botonTema.innerText = '☀️ Modo Claro';
     }
 }
 
 // Función para cargar y renderizar los datos del torneo
 async function cargarTorneo() {
     try {
-        // Obtenemos los datos del archivo JSON local
         const respuesta = await fetch('torneo.json');
         const datos = await respuesta.json();
         
         const gridGrupos = document.getElementById('grid-grupos');
-        gridGrupos.innerHTML = ''; // Limpiar el contenedor por si acaso
+        gridGrupos.innerHTML = '';
 
-        // Recorrer cada grupo definido en el JSON
         for (const [nombreGrupo, jugadores] of Object.entries(datos.grupos)) {
             
-            // ORDENAR JUGADORES: Primero por puntos, si empatan, por Kills de forma descendente
+            // ORDENAR JUGADORES: Por puntos, y desempate por Kills
             const jugadoresOrdenados = [...jugadores].sort((a, b) => {
                 if (b.puntos !== a.puntos) {
                     return b.puntos - a.puntos;
@@ -35,7 +47,6 @@ async function cargarTorneo() {
                 return b.kills - a.kills;
             });
 
-            // Crear la estructura de la tarjeta del grupo
             const tarjeta = document.createElement('div');
             tarjeta.className = 'tarjeta-grupo';
 
@@ -53,15 +64,12 @@ async function cargarTorneo() {
                     <tbody>
             `;
 
-            // Construir las filas de cada jugador
             jugadoresOrdenados.forEach(jugador => {
-                // Si el nombre es genérico o vacío, usar una skin predeterminada (Steve), si no, usar su nick
                 const esPlaceholder = jugador.nombre.startsWith('Jugador_');
                 const avatarUrl = esPlaceholder 
                     ? 'https://cravatar.eu/helm/Steve/24.png'
                     : `https://cravatar.eu/helm/${jugador.nombre}/24.png`;
 
-                // Determinar la clase visual según su estado (pendiente, clasificado, eliminado)
                 let claseEstado = 'fila-jugador';
                 if (jugador.estado === 'clasificado') claseEstado += ' clasificado';
                 if (jugador.estado === 'eliminado') claseEstado += ' eliminado';
@@ -79,11 +87,7 @@ async function cargarTorneo() {
                 `;
             });
 
-            tablaHTML += `
-                    </tbody>
-                </table>
-            `;
-
+            tablaHTML += `</tbody></table>`;
             tarjeta.innerHTML = tablaHTML;
             gridGrupos.appendChild(tarjeta);
         }
@@ -94,5 +98,5 @@ async function cargarTorneo() {
     }
 }
 
-// Ejecutar la carga del torneo cuando la página termine de leer el documento HTML
+// Iniciar carga al estar listo el DOM
 document.addEventListener('DOMContentLoaded', cargarTorneo);
