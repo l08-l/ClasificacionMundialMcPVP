@@ -5,21 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundial PvP Minecraft</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Fuente Pixel Art para títulos desde Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Botón Flotante para cambiar de Modo -->
     <div class="theme-switch-wrapper">
         <button id="theme-toggle" class="theme-btn" onclick="alternarTema()">☀️ Modo Claro</button>
     </div>
 
     <header>
         <h1>⚔️ TORNEO MUNDIAL PVP MINECRAFT ⚔️</h1>
-        <p>Estadísticas en vivo y seguimiento de fases</p>
+        <p class="subtitulo-header">Estadísticas en vivo y seguimiento de fases</p>
         
         <nav class="pestanas">
             <button class="tab-btn activo" onclick="cambiarPestana('grupos')">Fase de Grupos</button>
@@ -29,14 +27,11 @@
     </header>
 
     <main class="contenedor">
-        <!-- Sección de Fase de Grupos -->
         <section id="seccion-grupos" class="contenido-tab">
             <div id="grid-grupos" class="grid-grupos">
-                <!-- JavaScript meterá los 8 grupos aquí automáticamente -->
-            </div>
+                </div>
         </section>
 
-        <!-- Sección del Bracket -->
         <section id="seccion-bracket" class="contenido-tab oculto">
             <div class="mensaje-bracket">
                 <h3>🏆 El Bracket de Eliminación Directa</h3>
@@ -44,7 +39,6 @@
             </div>
         </section>
 
-        <!-- Nueva Sección de Información -->
         <section id="seccion-info" class="contenido-tab oculto">
             <div class="tarjeta-info">
                 <h2>📋 FORMATO DEL TORNEO</h2>
@@ -63,8 +57,19 @@
                 </div>
 
                 <div class="info-bloque">
-                    <h3>📜 Reglas Generales</h3>
-                    <p>Aquí puedes añadir los lineamientos que se te ocurran más adelante (ej: versiones de juego, mods prohibidos, límites de tiempo, etc.).</p>
+                    <h3>📜 Información Adicional</h3>
+                    <p>Cada jugador se enfrentará en 8 modos diferentes de 3 rondas cada una:</p>
+                    <ul class="lista-modos">
+                        <li>🗡️ Sword (3 rondas)</li>
+                        <li>🪓 Axe (3 rondas)</li>
+                        <li>🧪 Pot (3 rondas)</li>
+                        <li>🔥 Nethpot (3 rondas)</li>
+                        <li>🍎 UHC (3 rondas)</li>
+                        <li>🌲 SMP (1 ronda)</li>
+                        <li>🔨 Mazo (1 ronda)</li>
+                        <li>🔮 Crystal (1 ronda)</li>
+                    </ul>
+                    <p class="nota-empate">⚠️ <strong>En caso de terminar en un empate:</strong> Ambos contrincantes deberán ponerse de acuerdo para desempatar en el modo de su elección.</p>
                 </div>
             </div>
         </section>
