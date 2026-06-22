@@ -1,12 +1,21 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mundial PvP Minecraft</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Fuente Pixel Art para títulos desde Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- Botón Flotante para cambiar de Modo -->
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" class="theme-btn" onclick="alternarTema()">☀️ Modo Claro</button>
+    </div>
 
     <header>
         <h1>⚔️ TORNEO MUNDIAL PVP MINECRAFT ⚔️</h1>
@@ -15,6 +24,7 @@
         <nav class="pestanas">
             <button class="tab-btn activo" onclick="cambiarPestana('grupos')">Fase de Grupos</button>
             <button class="tab-btn" onclick="cambiarPestana('bracket')">Fase Final (Octavos a Final)</button>
+            <button class="tab-btn" onclick="cambiarPestana('info')">Información del Torneo</button>
         </nav>
     </header>
 
@@ -32,7 +42,31 @@
                 <h3>🏆 El Bracket de Eliminación Directa</h3>
                 <p>Próximamente se habilitarán los cruces cuando terminen las fases de grupos.</p>
             </div>
-            <!-- Aquí construiremos el árbol visual más adelante -->
+        </section>
+
+        <!-- Nueva Sección de Información -->
+        <section id="seccion-info" class="contenido-tab oculto">
+            <div class="tarjeta-info">
+                <h2>📋 FORMATO DEL TORNEO</h2>
+                <div class="info-bloque">
+                    <h3>👥 Fase de Grupos (32 Jugadores)</h3>
+                    <p>Los participantes se dividen en 8 grupos de 4 jugadores cada uno (representando a su país o región mixta). Competirán de forma interna.</p>
+                    <ul>
+                        <li><strong>Top 1 y Top 2:</strong> Clasifican directamente a los Octavos de Final.</li>
+                        <li><strong>Top 3 y Top 4:</strong> Quedan eliminados del torneo mundial.</li>
+                    </ul>
+                </div>
+                
+                <div class="info-bloque">
+                    <h3>⚔️ Fase Final (Eliminación Directa)</h3>
+                    <p>A partir de Octavos de Final, los combates son de eliminación directa a nivel internacional. El que pierde se va a casa, el que gana avanza en el bracket hasta la Gran Final.</p>
+                </div>
+
+                <div class="info-bloque">
+                    <h3>📜 Reglas Generales</h3>
+                    <p>Aquí puedes añadir los lineamientos que se te ocurran más adelante (ej: versiones de juego, mods prohibidos, límites de tiempo, etc.).</p>
+                </div>
+            </div>
         </section>
     </main>
 
