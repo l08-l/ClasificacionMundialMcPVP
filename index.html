@@ -1,45 +1,5 @@
-<!DOCTYPE html>
-<html lang="es" data-theme="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundial PvP Minecraft</title>
-    <link rel="stylesheet" href="style.css?v=1.1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body>
-
-    <div class="theme-switch-wrapper">
-        <button id="theme-toggle" class="theme-btn" onclick="alternarTema()">☀️ Modo Claro</button>
-    </div>
-
-    <header>
-        <h1>⚔️ TORNEO MUNDIAL PVP MINECRAFT ⚔️</h1>
-        <p class="subtitulo-header">Estadísticas en vivo y seguimiento de fases</p>
-        
-        <nav class="pestanas">
-            <button class="tab-btn activo" onclick="cambiarPestana('grupos')">Fase de Grupos</button>
-            <button class="tab-btn" onclick="cambiarPestana('bracket')">Fase Final (Octavos a Final)</button>
-            <button class="tab-btn" onclick="cambiarPestana('info')">Información del Torneo</button>
-        </nav>
-    </header>
-
-    <main class="contenedor">
-        <section id="seccion-grupos" class="contenido-tab">
-            <div id="grid-grupos" class="grid-grupos">
-                </div>
-        </section>
-
-        <section id="seccion-bracket" class="contenido-tab oculto">
-            <div class="mensaje-bracket">
-                <h3>🏆 El Bracket de Eliminación Directa</h3>
-                <p>Próximamente se habilitarán los cruces cuando terminen las fases de grupos.</p>
-            </div>
-        </section>
-
-        <section id="seccion-info" class="contenido-tab oculto">
+<!-- Sección de Información (Actualizada con Tiers y Subtiers) -->
+        <section id="seccion-info" class="contenido-tab">
             <div class="tarjeta-info">
                 <h2>📋 FORMATO DEL TORNEO</h2>
                 <div class="info-bloque">
@@ -58,27 +18,49 @@
 
                 <div class="info-bloque">
                     <h3>📜 Información Adicional</h3>
-                    <p>Cada jugador se enfrentará en 8 modos diferentes de 3 rondas cada una:</p>
-                    <ul class="lista-modos">
-                        <li>🗡️ Sword (3 rondas)</li>
-                        <li>🪓 Axe (3 rondas)</li>
-                        <li>🧪 Pot (3 rondas)</li>
-                        <li>🔥 Nethpot (3 rondas)</li>
-                        <li>🍎 UHC (3 rondas)</li>
-                        <li>🌲 SMP (1 ronda)</li>
-                        <li>🔨 Mazo (1 ronda)</li>
-                        <li>🔮 Crystal (1 ronda)</li>
+                    <p>Cada jugador escogerá un modo de su elección de los disponibles en la tierlist principal. ¡En caso de haber empate pelearán en un modo de subtiers al azar para decidir el ganador!</p>
+                    
+                    <h4 class="titulo-lista-tier">⚔️ MC Tiers:</h4>
+                    <ul class="lista-modos-tier">
+                        <li>🗡️ Sword</li>
+                        <li>🪓 Axe</li>
+                        <li>🧪 Pot</li>
+                        <li>🔥 Nethpot</li>
+                        <li>🍎 UHC</li>
+                        <li>🔨 Mace</li>
+                        <li>🔮 Crystal</li>
+                        <li>🌲 SMP</li>
                     </ul>
-                    <p class="nota-empate">⚠️ <strong>En caso de terminar en un empate:</strong> Ambos contrincantes deberán ponerse de acuerdo para desempatar en el modo de su elección.</p>
+
+                    <h4 class="titulo-lista-tier">🛡️ Subtiers:</h4>
+                    <ul class="lista-modos-subtier">
+                        <li>🚫 Shieldless</li>
+                        <li>🚪 Door</li>
+                        <li>🏅 TotemBreaker</li>
+                        <li>🚀 RocketMace</li>
+                        <li>💥 OneTap</li>
+                        <li>🛠️ FastCrafting</li>
+                        <li>🛡️ NethTank</li>
+                        <li>🧨 Rocket</li>
+                        <li>👑 Gold</li>
+                        <li>🎲 Randomizer</li>
+                        <li>📦 Boxpvp</li>
+                        <li>🔱 SpearMace</li>
+                        <li>🦅 SpearElytra</li>
+                        <li>💎 DiamondOp</li>
+                        <li>💎🌲 DiamondSmp</li>
+                        <li>🏹 Bow</li>
+                        <li>🛒 CartLt</li>
+                        <li>🛒🔥 CartHt</li>
+                        <li>🏃‍♂️ Manhunt</li>
+                        <li>🦴 OgVanilla</li>
+                        <li>🤮 Debuff</li>
+                        <li>⚡ SpeedPvp</li>
+                        <li>💣 Creeper</li>
+                        <li>🔱 Trident</li>
+                        <li>🛏️ Bed</li>
+                        <li>🔮💎 DiamondCrystal</li>
+                    </ul>
                 </div>
             </div>
         </section>
-    </main>
-
-    <footer>
-        <p>Mundial de PvP de Minecraft © 2026 - Alojado en GitHub Pages</p>
-    </footer>
-
-    <script src="script.js"></script>
-</body>
-</html>
