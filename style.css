@@ -1,0 +1,137 @@
+/* Configuración General y Colores */
+:root {
+    --bg-principal: #1e1e24;
+    --bg-tarjetas: #2a2a32;
+    --texto: #f5f5f5;
+    --oro-minecraft: #ffaa00;
+    --verde-clasificado: #2ecc71;
+    --rojo-eliminado: #e74c3c;
+    --borde: #444450;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-principal);
+    color: var(--texto);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #111115;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-bottom: 4px solid var(--oro-minecraft);
+}
+
+header h1 {
+    margin: 0;
+    color: var(--oro-minecraft);
+    letter-spacing: 2px;
+}
+
+/* Pestañas de Navegación */
+.pestanas {
+    margin-top: 1.5rem;
+}
+
+.tab-btn {
+    background-color: var(--bg-tarjetas);
+    color: var(--texto);
+    border: 2px solid var(--borde);
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.tab-btn:hover, .tab-btn.activo {
+    background-color: var(--oro-minecraft);
+    color: #111;
+    font-weight: bold;
+    border-color: var(--oro-minecraft);
+}
+
+/* Contenedor y Grids */
+.contenedor {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.grid-grupos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Tarjetas de Grupos */
+.tarjeta-grupo {
+    background-color: var(--bg-tarjetas);
+    border: 2px solid var(--borde);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.tarjeta-grupo h2 {
+    background-color: #1a1a22;
+    margin: 0;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border-bottom: 2px solid var(--borde);
+    color: var(--oro-minecraft);
+}
+
+/* Tablas dentro de los grupos */
+.tabla-grupo {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabla-grupo th {
+    background-color: #22222a;
+    font-size: 0.85rem;
+    padding: 0.5rem;
+    text-align: left;
+    color: #aaa;
+}
+
+.tabla-grupo td {
+    padding: 0.6rem 0.5rem;
+    border-bottom: 1px solid #333340;
+    font-size: 0.95rem;
+}
+
+/* Estados de los jugadores */
+.fila-jugador.clasificado {
+    border-left: 5px solid var(--verde-clasificado);
+    background-color: rgba(46, 204, 113, 0.05);
+}
+
+.fila-jugador.eliminado {
+    border-left: 5px solid var(--rojo-eliminado);
+    background-color: rgba(231, 76, 60, 0.05);
+}
+
+/* Avatar de Minecraft */
+.avatar-head {
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+    margin-right: 8px;
+    border-radius: 3px;
+}
+
+/* Utilidades */
+.oculto { display: none; }
+.centro { text-align: center; }
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: #777;
+    font-size: 0.9rem;
+}

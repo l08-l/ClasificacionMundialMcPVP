@@ -1,0 +1,52 @@
+{
+  "grupos": {
+    "Grupo A - Chile": [
+      {"id": 1, "nombre": "Jugador_CL1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 2, "nombre": "Jugador_CL2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 3, "nombre": "Jugador_CL3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 4, "nombre": "Jugador_CL4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo B - España": [
+      {"id": 5, "nombre": "Jugador_ES1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 6, "nombre": "Jugador_ES2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 7, "nombre": "Jugador_ES3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 8, "nombre": "Jugador_ES4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo C - Argentina": [
+      {"id": 9, "nombre": "Jugador_AR1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 10, "nombre": "Jugador_AR2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 11, "nombre": "Jugador_AR3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 12, "nombre": "Jugador_AR4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo D - Colombia": [
+      {"id": 13, "nombre": "Jugador_CO1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 14, "nombre": "Jugador_CO2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 15, "nombre": "Jugador_CO3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 16, "nombre": "Jugador_CO4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo E - Marruecos": [
+      {"id": 17, "nombre": "Jugador_MA1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 18, "nombre": "Jugador_MA2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 19, "nombre": "Jugador_MA3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 20, "nombre": "Jugador_MA4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo F - General (Mixto)": [
+      {"id": 21, "nombre": "Jugador_MX1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 22, "nombre": "Jugador_MX2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 23, "nombre": "Jugador_MX3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 24, "nombre": "Jugador_MX4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo G - México": [
+      {"id": 25, "nombre": "Jugador_MXA", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 26, "nombre": "Jugador_MXB", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 27, "nombre": "Jugador_MXC", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 28, "nombre": "Jugador_MXD", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ],
+    "Grupo H - Perú": [
+      {"id": 29, "nombre": "Jugador_PD1", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 30, "nombre": "Jugador_PD2", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 31, "nombre": "Jugador_PD3", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
+      {"id": 32, "nombre": "Jugador_PD4", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
+    ]
+  }
+}

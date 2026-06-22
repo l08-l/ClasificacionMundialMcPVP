@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mundial PvP Minecraft</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>⚔️ TORNEO MUNDIAL PVP MINECRAFT ⚔️</h1>
+        <p>Estadísticas en vivo y seguimiento de fases</p>
+        
+        <nav class="pestanas">
+            <button class="tab-btn activo" onclick="cambiarPestana('grupos')">Fase de Grupos</button>
+            <button class="tab-btn" onclick="cambiarPestana('bracket')">Fase Final (Octavos a Final)</button>
+        </nav>
+    </header>
+
+    <main class="contenedor">
+        <!-- Sección de Fase de Grupos -->
+        <section id="seccion-grupos" class="contenido-tab">
+            <div id="grid-grupos" class="grid-grupos">
+                <!-- JavaScript meterá los 8 grupos aquí automáticamente -->
+            </div>
+        </section>
+
+        <!-- Sección del Bracket -->
+        <section id="seccion-bracket" class="contenido-tab oculto">
+            <div class="mensaje-bracket">
+                <h3>🏆 El Bracket de Eliminación Directa</h3>
+                <p>Próximamente se habilitarán los cruces cuando terminen las fases de grupos.</p>
+            </div>
+            <!-- Aquí construiremos el árbol visual más adelante -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Mundial de PvP de Minecraft © 2026 - Alojado en GitHub Pages</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
