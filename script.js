@@ -25,7 +25,7 @@ function alternarTema() {
     }
 }
 
-// FUNCIÓN ACTUALIZADA CON LA NUEVA API DE SKINS (MINOTAR)
+// FUNCIÓN CORREGIDA CON CRAFATAR
 async function cargarTorneo() {
     try {
         const respuesta = await fetch('torneo.json');
@@ -64,10 +64,10 @@ async function cargarTorneo() {
             jugadoresOrdenados.forEach(jugador => {
                 const esPlaceholder = jugador.nombre.startsWith('Cupo_Disponible');
                 
-                // NUEVA API: Minotar busca por nick directo y /helm/ añade la segunda capa del skin (pelo, cascos, etc.)
+                // USAMOS CRAFATAR: Añadimos ?overlay para que renderice gorros/pelo correctamente
                 const avatarUrl = esPlaceholder 
-                    ? 'https://minotar.net/helm/Steve/24.png'
-                    : `https://minotar.net/helm/${jugador.nombre}/24.png`;
+                    ? 'https://crafatar.com/avatars/606e2ff0-ed77-487d-a194-393e7d1a3d28?size=24' // UUID de Steve
+                    : `https://crafatar.com/avatars/${jugador.nombre}?size=24&overlay`;
 
                 let claseEstado = 'fila-jugador';
                 if (jugador.estado === 'clasificado') claseEstado += ' clasificado';
@@ -75,12 +75,14 @@ async function cargarTorneo() {
 
                 tablaHTML += `
                     <tr class="${claseEstado}">
-                        <td>
-                            <img src="${avatarUrl}" 
-                                 alt="${jugador.nombre}" 
-                                 class="avatar-head" 
-                                 onerror="this.onerror=null; this.src='https://minotar.net/helm/Steve/24.png';">
-                            <strong>${jugador.nombre}</strong>
+                        <td class="celda-jugador">
+                            <div class="avatar-contenedor">
+                                <img src="${avatarUrl}" 
+                                     alt="${jugador.nombre}" 
+                                     class="avatar-head" 
+                                     onerror="this.onerror=null; this.src='https://crafatar.com/avatars/606e2ff0-ed77-487d-a194-393e7d1a3d28?size=24';">
+                            </div>
+                            <strong class="nick-jugador">${jugador.nombre}</strong>
                         </td>
                         <td class="centro"><strong>${jugador.puntos}</strong></td>
                         <td class="centro">${jugador.kills}</td>
