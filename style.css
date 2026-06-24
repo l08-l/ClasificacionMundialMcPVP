@@ -313,3 +313,30 @@ footer {
     font-size: 0.95rem;
     font-weight: bold;
 }
+
+/* Corrección de alineación de celdas y avatares */
+.celda-jugador {
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espacio fijo entre cabeza y nombre */
+}
+
+.avatar-contenedor {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0; /* Evita que el contenedor se deforme si falta la imagen */
+}
+
+.avatar-head {
+    width: 24px;
+    height: 24px;
+    border-radius: 3px;
+    display: block;
+}
+
+.nick-jugador {
+    white-space: nowrap; /* Evita que el texto salte a una segunda línea */
+}
