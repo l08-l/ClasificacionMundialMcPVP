@@ -25,7 +25,7 @@ function alternarTema() {
     }
 }
 
-// FUNCIÓN CORREGIDA CON CRAFATAR
+// FUNCIÓN CON API ANTIBLOQUEO (ASHCON)
 async function cargarTorneo() {
     try {
         const respuesta = await fetch('torneo.json');
@@ -64,10 +64,11 @@ async function cargarTorneo() {
             jugadoresOrdenados.forEach(jugador => {
                 const esPlaceholder = jugador.nombre.startsWith('Cupo_Disponible');
                 
-                // USAMOS CRAFATAR: Añadimos ?overlay para que renderice gorros/pelo correctamente
+                // API ALTERNATIVA: Ashcon Avatar Generator (Altamente compatible con navegadores)
+                // Usamos la skin por defecto de Steve (id: 606e2ff0ed77487da194393e7d1a3d28) si es cupo libre
                 const avatarUrl = esPlaceholder 
-                    ? 'https://crafatar.com/avatars/606e2ff0-ed77-487d-a194-393e7d1a3d28?size=24' // UUID de Steve
-                    : `https://crafatar.com/avatars/${jugador.nombre}?size=24&overlay`;
+                    ? 'https://api.ashcon.app/mojang/v2/avatar/606e2ff0ed77487da194393e7d1a3d28'
+                    : `https://api.ashcon.app/mojang/v2/avatar/${jugador.nombre}`;
 
                 let claseEstado = 'fila-jugador';
                 if (jugador.estado === 'clasificado') claseEstado += ' clasificado';
@@ -80,7 +81,8 @@ async function cargarTorneo() {
                                 <img src="${avatarUrl}" 
                                      alt="${jugador.nombre}" 
                                      class="avatar-head" 
-                                     onerror="this.onerror=null; this.src='https://crafatar.com/avatars/606e2ff0-ed77-487d-a194-393e7d1a3d28?size=24';">
+                                     crossorigin="anonymous"
+                                     onerror="this.onerror=null; this.src='https://api.ashcon.app/mojang/v2/avatar/606e2ff0ed77487da194393e7d1a3d28';">
                             </div>
                             <strong class="nick-jugador">${jugador.nombre}</strong>
                         </td>
