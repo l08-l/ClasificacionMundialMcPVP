@@ -1,14 +1,11 @@
 // Función para cambiar de pestaña dinámicamente
 function cambiarPestana(pestana) {
-    // Romper enlace de activo en todos los botones y ocultar secciones
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('activo'));
     document.querySelectorAll('.contenido-tab').forEach(sec => sec.classList.add('oculto'));
 
-    // Activar el botón correspondiente usando su atributo de onclick
     const botonActivo = document.querySelector(`button[onclick="cambiarPestana('${pestana}')"]`);
     if (botonActivo) botonActivo.classList.add('activo');
 
-    // Mostrar la sección correspondiente
     const seccionActiva = document.getElementById(`seccion-${pestana}`);
     if (seccionActiva) seccionActiva.classList.remove('oculto');
 }
@@ -28,7 +25,7 @@ function alternarTema() {
     }
 }
 
-// Función para cargar y renderizar los datos del torneo
+// FUNCIÓN ACTUALIZADA CON LA NUEVA API DE SKINS (MINOTAR)
 async function cargarTorneo() {
     try {
         const respuesta = await fetch('torneo.json');
@@ -65,10 +62,12 @@ async function cargarTorneo() {
             `;
 
             jugadoresOrdenados.forEach(jugador => {
-                const esPlaceholder = jugador.nombre.startsWith('Jugador_');
+                const esPlaceholder = jugador.nombre.startsWith('Cupo_Disponible');
+                
+                // NUEVA API: Minotar busca por nick directo y /helm/ añade la segunda capa del skin (pelo, cascos, etc.)
                 const avatarUrl = esPlaceholder 
-                    ? 'https://cravatar.eu/helm/Steve/24.png'
-                    : `https://cravatar.eu/helm/${jugador.nombre}/24.png`;
+                    ? 'https://minotar.net/helm/Steve/24.png'
+                    : `https://minotar.net/helm/${jugador.nombre}/24.png`;
 
                 let claseEstado = 'fila-jugador';
                 if (jugador.estado === 'clasificado') claseEstado += ' clasificado';
@@ -77,7 +76,10 @@ async function cargarTorneo() {
                 tablaHTML += `
                     <tr class="${claseEstado}">
                         <td>
-                            <img src="${avatarUrl}" alt="${jugador.nombre}" class="avatar-head">
+                            <img src="${avatarUrl}" 
+                                 alt="${jugador.nombre}" 
+                                 class="avatar-head" 
+                                 onerror="this.onerror=null; this.src='https://minotar.net/helm/Steve/24.png';">
                             <strong>${jugador.nombre}</strong>
                         </td>
                         <td class="centro"><strong>${jugador.puntos}</strong></td>
