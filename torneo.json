@@ -1,27 +1,27 @@
 {
   "grupos": {
     "Grupo A - Chile": [
-      {"id": 1, "nombre": "ezequielking2007", "puntos": 6, "kills": 6, "deaths": 0, "estado": "pendiente"},
-      {"id": 2, "nombre": "Capybara4280", "puntos": 6, "kills": 6, "deaths": 0, "estado": "pendiente"},
+      {"id": 1, "nombre": "ezequielking2007", "puntos": 3, "kills": 6, "deaths": 0, "estado": "pendiente"},
+      {"id": 2, "nombre": "Capybara4280", "puntos": 3, "kills": 6, "deaths": 0, "estado": "pendiente"},
       {"id": 3, "nombre": "By_Capy", "puntos": 0, "kills": 0, "deaths": 6, "estado": "pendiente"},
       {"id": 4, "nombre": "Krzine", "puntos": 0, "kills": 0, "deaths": 6, "estado": "pendiente"}
     ],
     "Grupo B - Perú": [
-      {"id": 5, "nombre": "SideGool", "puntos": 4, "kills": 4, "deaths": 7, "estado": "pendiente"},
-      {"id": 6, "nombre": "Luis2305", "puntos": 7, "kills": 7, "deaths": 4, "estado": "pendiente"},
+      {"id": 5, "nombre": "SideGool", "puntos": 0, "kills": 4, "deaths": 7, "estado": "pendiente"},
+      {"id": 6, "nombre": "Luis2305", "puntos": 3, "kills": 7, "deaths": 4, "estado": "pendiente"},
       {"id": 7, "nombre": "piero366AR", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
       {"id": 8, "nombre": "AlessIpBlaze", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
     ],
     "Grupo C - Colombia": [
-      {"id": 9, "nombre": "ItzCrixs", "puntos": 6, "kills": 6, "deaths": 0, "estado": "pendiente"},
+      {"id": 9, "nombre": "ItzCrixs", "puntos": 3, "kills": 6, "deaths": 0, "estado": "pendiente"},
       {"id": 10, "nombre": "D4n_07X", "puntos": 0, "kills": 0, "deaths": 6, "estado": "pendiente"},
       {"id": 11, "nombre": "Ironsebax789", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
       {"id": 12, "nombre": "iFxnhss", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
     ],
     "Grupo D - España": [
-      {"id": 13, "nombre": "Roier2007", "puntos": 6, "kills": 6, "deaths": 4, "estado": "pendiente"},
+      {"id": 13, "nombre": "Roier2007", "puntos": 3, "kills": 6, "deaths": 4, "estado": "pendiente"},
       {"id": 14, "nombre": "S3nseiKrown", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"},
-      {"id": 15, "nombre": "ColdyXT", "puntos": 4, "kills": 4, "deaths": 6, "estado": "pendiente"},
+      {"id": 15, "nombre": "ColdyXT", "puntos": 0, "kills": 4, "deaths": 6, "estado": "pendiente"},
       {"id": 16, "nombre": "Demonio9872", "puntos": 0, "kills": 0, "deaths": 0, "estado": "pendiente"}
     ],
     "Grupo E - Argentina": [
